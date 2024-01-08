@@ -159,7 +159,7 @@ let
     (mkJetBrainsProduct {
       inherit pname version src wmClass jdk buildNumber product;
       productShort = "IDEA";
-      extraLdPath = [ zlib, stdenv.cc.cc ];
+      extraLdPath = [ zlib stdenv.cc.cc ];
       extraWrapperArgs = [
         ''--set M2_HOME "${maven}/maven"''
         ''--set M2 "${maven}/maven/bin"''
